@@ -5,9 +5,16 @@ REST is a set of architectural constraints, not a protocol or a standard. API de
 https://www.redhat.com/en/topics/api/what-is-a-rest-api#:~:text=A%20REST%20API%20(also%20known,by%20computer%20scientist%20Roy%20Fielding.
 
 
+# first step is to create a model that predicts scores
+X check worldcup input data
+X check imbalanced dataset
+X create predictor
 
-# goal is to create an api on my local machine
+# my goal is to create an api on my local machine. 
+check fast and flask api
+check swagger
+create an app where you can run a button and get the score for the nxt minute
 
-# a cloud/data engineer could then focus on deploying the api and the flow in the cloud by:
-# creating a kubernetes cluster and deploying the api via a docker container
-# check seldon?
+# next steps for production:
+a cloud/data engineer could then focus on deploying the api and the flow in the cloud by:
+creating a kubernetes cluster and deploying the api via a docker container with seldon.
