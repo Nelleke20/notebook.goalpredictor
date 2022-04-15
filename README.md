@@ -11,13 +11,13 @@ https://www.redhat.com/en/topics/api/what-is-a-rest-api#:~:text=A%20REST%20API%2
 - create predictor: DONE
 
 # second step is to create an api in a docker container
-- fast api(faster than flask): DONE
+- fast api(faster than flask): DONE running in app folder - uvicorn main:app --reload
 - check swagger: DONE
 
-
-
-- docker container(docker build -t dockerfile)) : DOING
-find out how it works and make it run locally
+- docker container(docker build -t dockerfile)) : DONE
+docker build -t predictor .
+- create front-end button:
+https://towardsdatascience.com/how-to-easily-build-your-first-machine-learning-web-app-in-python-c3d6c0f0a01c#e14b
 
 # next steps: my goal is to create an api on my local machine. 
 create an app where you can run a button and get the score for the nxt minute

@@ -29,12 +29,12 @@ model = load("best_model_svc.joblib")
 def main():
     return {'message': 'Welcome to nelleke-machinelearning-api!'}
 
-class RequestBody(BaseModel):
+class RequestData(BaseModel):
     features: List[List[float]]
 
 # defining prediction endpoint
 @app.post('/predict')
-def predict(data: RequestBody):
+def predict(data: RequestData):
     data_selection = data.features
     prediction = model.predict(data_selection)[0]
     return {'prediction' : prediction}
