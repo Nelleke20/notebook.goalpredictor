@@ -27,3 +27,11 @@ https://towardsdatascience.com/how-to-easily-build-your-first-machine-learning-w
 # next steps for production:
 a cloud/data engineer could then focus on deploying the api and the flow in the cloud by:
 creating a kubernetes cluster and deploying the api via the docker container.
+
+
+
+
+---------------
+
+flask-app:
+python flask_app.py
