@@ -9,6 +9,10 @@ from sklearn.metrics import (
 )
 
 
+# THESE ARE SOME UTILS FUNCTIONS FOR THE NOTEBOOKS;
+# NOT PRODUCTION READY
+
+
 # create y-var for goalscores variable
 def create_goal_df(df, string_y_var, output_column_list):
     yvar_goals = df.loc[df["shot_outcome"] == string_y_var].reset_index()
@@ -96,7 +100,7 @@ def events_feature_engineering(df):
 
 
 # aggregate-events
-def aggregate_events(df, groupby_columns, agg_type_max):
+def aggregate_events_per_minute(df, groupby_columns, agg_type_max):
     x_vars = df.drop(groupby_columns, axis=1).columns.to_list()
     total_sum = []
     for column in x_vars:
