@@ -9,3 +9,8 @@ notebooks/.cache/
 notebooks/.ipynb_checkpoints/
 notebooks/__pycache__/
 notebooks/oud/.ipynb_checkpoints/
+notebooks/*.png
+notebooks/*.jpg
+mlruns
+mlartifacts
+models/*.joblib
