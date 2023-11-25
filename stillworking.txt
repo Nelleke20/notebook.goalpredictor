@@ -1,0 +1,4 @@
+## add conclusions to readme for best model
+## test calling mlflow results from register
+## test working api's and docker file
+##
