@@ -1,4 +1,5 @@
 ## add conclusions to readme for best model
+## test differnet strategies and different fbeta metrics
 ## test calling mlflow results from register
 ## test working api's and docker file
 ##
