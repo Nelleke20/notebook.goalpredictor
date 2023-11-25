@@ -1,16 +1,29 @@
-# notebook.goalpredictor
-I aim to have some fun with an imbalanced dataset. I expect it to be very hard to predict goals (if it were easy; wouldn't everybody have done it by now?) But my goal is not to create a high scoring model. My goal is to check what strategy works best for this imbalanced dataset, have some fun with soccer data, and see if i can deploy it as an API that can be used by other people.
+### Introduction
+Can I predict if a goal will be scored in the next minute in a soccer match? The goal of this project was to experiment a little with extremely imbalanced datatest. Something which comes across in multiple situation. To simulate a relevant dataset I decided to experiment with data from soccergames in the world cup.
 
-# first step is to create a model that predicts scores
-- check worldcup input data: DONE
-- check imbalanced dataset: DONE
-- create predictor: DONE
+#### Design / setup of the project:
+WIP
 
-# second step is to create a working-api in a docker 
-- fast api(faster than flask): DONE running in app folder - uvicorn main:app --reload
-- check and test swagger: DONE
-- built a docker container(docker build -t dockerfile)): DONE 
+#### Starting date
+Apr 1, 2022
 
-# possible next steps: create a working front-end for other users 
-create an app where you can run a button and get the score for the nxt minute on my raspberry pi
-- create front-end input webpage PARTLY DONE (extra example: see repo webserver.sensor)
+#### Context
+I expect it to be very hard to predict goals (if it were easy; wouldn't everybody have done it by now?) For now my aim is not to create a high scoring model. My goal is to check what strategy works best for this imbalanced dataset, while having some fun with soccer data. To create a relevant dataset I used some world cup data and created features which described what was happening per minute  in the game (e.g. where was the ball, which players were on the field, what kind of ball interactions happend?). With this data I tried to  predict if a goal would be scored in the next minute.
+
+In addition I modelled three different datasets to see how they would impact the score:
+Aggregated all 1 min data prior to the prediciton point.
+Aggregate all 5 min data prior to the prediciton point.
+Aggregate all 10 min data prior to the prediction point.
+
+The results showed that the best and most stable dataset was the 10-min dataset combined with the
+
+<p align="center" width="100%">
+    <img width="75%" src="img/allresults.png">
+</p>
+
+<p align="center" width="100%">
+    <img width="75%" src="img/modelresults.png">
+</p>
+
+#### Tech and Tools
+Jupyter, mlflow, imbalanced strategies, soccer data
