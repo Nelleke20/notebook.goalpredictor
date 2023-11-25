@@ -1,5 +1,5 @@
 ### Introduction
-Can I predict if a goal will be scored in the next minute in a soccer match? The goal of this project was to experiment a little with extremely imbalanced datatest. Something which comes across in multiple situation. To simulate a relevant dataset I decided to experiment with data from soccergames in the world cup.
+Can I predict if a goal will be scored in the next minute in a soccer match? The goal (no pun intended) of this project was to experiment a little with extremely imbalanced datatest. Something which comes across in multiple situations. To simulate a relevant dataset I decided to experiment with data from soccergames in the Euros 2020.
 
 #### Design / setup of the project:
 WIP
