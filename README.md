@@ -18,7 +18,7 @@ In addition I modelled three different datasets to see how they would impact the
 * sum of 5 min data prior to the prediciton point.
 * sum of 10 min data prior to the prediction point.
 
-##### Results
+#### Results
 The results show that it usefull to experiment with different aggregated datasets as the aggregation on 10 level gives better resutls thatn the 1 and 5 min datasets:
 
 <p align="center" width="100%">
@@ -34,18 +34,21 @@ When looking closely in the different models that were trained and tested and ch
 However, when looking closely to our confusion matrix, we can see that we still classify 76 moments incorrectly.
 
 <p align="center" width="100%">
-    <img width="75%" src="img/correlation_plot_SVC_smoteENN.png">
+    <img width="50%" src="img/correlation_plot_SVC_smoteENN.png">
 </p>
 
-It really depends on the usecase if this is the model that you would like to implement. Lets say that we want to place bets during a game and win some money. Then we really want to make sure that we only place bets when we are very certain. This way, we could potentially make some money. In this scenario, precision is most important. So running the evauation again, shows us that we can best use a RandomForest model with no sampling strategy. Not a lot of positive predictions are made, but when it does so, this results in a scenario where 3 out of 4 predictions are correct! Check out the plots below:
+It really depends on the usecase if this is the model that you would like to implement. Lets say that we want to place bets during a game and win some money. Then we really want to make sure that we only place bets when we are very certain. This way, we could potentially make some money. In this scenario, precision is most important. So running the evauation again, shows us that we can best use a RandomForest model with no sampling strategy. Not a lot of positive predictions are made, but when it does so, this results in a scenario where 3 out of 4 predictions are correct!
+
+The orange line shows a spike for precision especially for the random forest classification models:
 
 <p align="center" width="100%">
     <img width="75%" src="img/modelresultsb.png">
 </p>
 
+In addition the confusion matrix shows the benefit of this precisions:
 
 <p align="center" width="100%">
-    <img width="75%" src="img/correlation_plot_RandomForest_nothing.png">
+    <img width="50%" src="img/correlation_plot_RandomForest_nothing.png">
 </p>
 
 #### Tech and Tools
