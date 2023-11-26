@@ -22,14 +22,22 @@ The results show that it usefull to experiment with different aggregated dataset
     <img width="75%" src="img/allresults.png">
 </p>
 
-When looking closely in the different models that were trained and tested and checking our evaluation metric for our imbalanced dataset we see the following results:
+When looking closely in the different models that were trained and tested and checking our evaluation metric for our imbalanced dataset (roc and fbeta) we see that the SVC smoteENN (nearly) comes out on top based on the following results:
 
 <p align="center" width="100%">
     <img width="75%" src="img/modelresults.png">
 </p>
 
+However, when looking closely to our confusion matrix, we can see that we still classify 76 moments incorrectly.
+
 <p align="center" width="100%">
     <img width="75%" src="../plots/correlation_plot_SVC_smoteENN.png">
+</p>
+
+It really depends on the usecase if this is the model that you would like to implement. Lets say that we want to place bets during a game and win some money. Then we really want to make sure that we only place bets when we are very certain. This way, we could potentially make some money. In this scenario, precision is most important. So running the evauation again, shows us that we can best use a RondomForest model with no sampling strategy. Not a lot of positive predictions are made, but when it does so, this results in a scenario where 3 out of 4 predictions are correct! Check out the plot below:
+
+<p align="center" width="100%">
+    <img width="75%" src="../plots/correlation_plot_RandomForest_nothing.png">
 </p>
 
 #### Tech and Tools
