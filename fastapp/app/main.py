@@ -20,10 +20,6 @@ app = FastAPI()
 # import a model
 model = load("best_model_svc.joblib")
 
-# @app.on_event('startup')
-# def load_model():
-#     model = load('best_model_svc.joblib')
-
 
 # Defining path operation for root endpoint
 @app.get("/")
