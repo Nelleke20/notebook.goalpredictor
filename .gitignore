@@ -16,3 +16,5 @@ mlartifacts
 models/*.joblib
 plots/*
 .DS_Store
+oldapp
+old
