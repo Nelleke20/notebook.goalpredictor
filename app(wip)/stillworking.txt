@@ -1,3 +1,0 @@
-## still doing
-## test calling mlflow results from register instead of joblib
-## run working api's and docker file
