@@ -1191,10 +1191,10 @@ if prediction_int == 0.0:
     st.subheader(
         "too bad... no goal will be scored in the next minute", divider="rainbow"
     )
-    image = "img/tired.png"
-    # image_bytes = bytes(image, "png")
-    image_stream = BytesIO(Image(image.encode()))
-    st.image(image_stream)
+    # image = "img/tired.png"
+    # # image_bytes = bytes(image, "png")
+    # image_stream = BytesIO(Image(image.encode()))
+    # st.image(image_stream)
 
 elif prediction_int == 1.0:
     st.subheader(
