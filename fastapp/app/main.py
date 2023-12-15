@@ -26,7 +26,7 @@ class RequestData(BaseModel):
 def predict(data: RequestData):
     data_selection = data.features
     prediction = model.predict(data_selection)[0]
-    return {"prediction": prediction}
+    return prediction
 
 
 if __name__ == "__main__":
