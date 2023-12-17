@@ -83,7 +83,7 @@ st.sidebar.markdown("__example feature input for a goal:__")
 st.sidebar.code(example_goal)
 
 # make a prediction
-st.title("Welcome to the goal prediction API!")
+st.title("Welcome to the goal prediction API :soccer:")
 X = st.text_input(
     "Please input a list of features to get a goal prediction for the next minute: "
 )
