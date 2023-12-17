@@ -51,7 +51,8 @@ In addition the confusion matrix shows the benefit of this precision:
 This model could be used in follow-up matches in the world-cup to predict goals in the next minute.
 
 #### app
-still WIP
+Combination of FastAPI backend and streamlit frontend.
+Using a docker-compose file to run the full service.
 
 #### Tech and Tools
-Jupyter, mlflow, imbalanced strategies, soccer data
+Jupyter, mlflow, imbalanced strategies, FastApi, Streamlit, soccer data
