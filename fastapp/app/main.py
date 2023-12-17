@@ -4,21 +4,22 @@ from pydantic import BaseModel
 from typing import List
 import uvicorn
 
-# create app
-app = FastAPI()
-
-# import a model
-model = load("best_model_svc.joblib")
-
-
-# Defining path operation for root endpoint
-@app.get("/")
-def main():
-    return {"message": "demo-model"}
-
 
 class RequestData(BaseModel):
     features: List[List[float]]
+
+
+# create app
+app = FastAPI()
+
+# import the model
+model = load("best_model_svc.joblib")
+
+
+# home
+@app.get("/")
+def main():
+    return {"message": "demo-model"}
 
 
 # defining prediction endpoint
@@ -30,5 +31,4 @@ def predict(data: RequestData):
 
 
 if __name__ == "__main__":
-    # uvicorn.run(app, host="localhost", port=8000)
     uvicorn.run(app)

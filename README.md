@@ -50,8 +50,9 @@ In addition the confusion matrix shows the benefit of this precision:
 
 This model could be used in follow-up matches in the world-cup to predict goals in the next minute.
 
-#### app
+#### Application
 Combination of FastAPI backend and streamlit frontend.
+
 Using a docker-compose file to run the full service.
 
 #### Tech and Tools

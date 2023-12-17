@@ -10,16 +10,6 @@ from io import BytesIO
 
 
 # helper functions
-def get_prediction(features):
-    url = "http://fastapp:8000/predict"
-    features = features.replace('"', "")  # if string is imported
-    features_list = features.split(",")
-    data = {"features": [features_list]}
-    response = requests.post(url, json=data)
-    # st.text(f'check health response:{response}')
-    return response.text
-
-
 def center_col_images(image, caption):
     col1, col2, col3 = st.columns(3)
     with col1:
@@ -30,7 +20,17 @@ def center_col_images(image, caption):
         st.write(" ")
 
 
-# example inputfeatures datastructure
+def get_prediction(features):
+    url = "http://fastapp:8000/predict"
+    features = features.replace('"', "")
+    features_list = features.split(",")
+    data = {"features": [features_list]}
+    response = requests.post(url, json=data)
+    # st.text(f'check health response:{response}')
+    return response.text
+
+
+# example input features datastructure
 example_no_goal = """
                 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
                 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -88,6 +88,7 @@ X = st.text_input(
     "Please input a list of features to get a goal prediction for the next minute: "
 )
 
+# run prediction
 try:
     prediction = float(get_prediction(X))
     if prediction == 0.0:
@@ -101,7 +102,6 @@ try:
             divider="rainbow",
         )
         center_col_images(image="img/goal.png", caption="Get Ready!")
-
 except ConnectionError as ce:
     st.text("please make sure the API is available to make a call")
 except (NameError, ValueError) as errors:
